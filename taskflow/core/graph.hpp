@@ -679,6 +679,16 @@ class Node {
     std::atomic<AsyncState> state {AsyncState::UNFINISHED};
   };
 
+  // TODO:
+  struct StaticCoroutine {
+    
+    std::variant<
+      std::function<tf::StaticCoroutine()>, std::function<tf::StaticCoroutine()>
+    >work;
+
+    tf::StaticCoroutine;
+  };
+
   using handle_t = std::variant<
     Placeholder,      // placeholder
     Static,           // static tasking
