@@ -350,6 +350,24 @@ target_link_libraries(
 )
 set_target_properties(bench_scan PROPERTIES COMPILE_FLAGS ${OpenMP_CXX_FLAGS})
 
+## benchmark 18: box_blur
+add_executable(
+  bench_box_blur
+  ${TF_BENCHMARK_DIR}/box_blur/main.cpp
+  ${TF_BENCHMARK_DIR}/box_blur/omp.cpp
+  ${TF_BENCHMARK_DIR}/box_blur/tbb.cpp
+  ${TF_BENCHMARK_DIR}/box_blur/taskflow.cpp
+)
+target_include_directories(bench_box_blur PRIVATE ${PROJECT_SOURCE_DIR}/3rd-party/CLI11)
+target_link_libraries(
+  bench_box_blur 
+  ${PROJECT_NAME} 
+  ${TBB_IMPORTED_TARGETS} 
+  ${OpenMP_CXX_LIBRARIES} 
+  tf::default_settings
+)
+set_target_properties(bench_box_blur PROPERTIES COMPILE_FLAGS ${OpenMP_CXX_FLAGS})
+
 ## benchmark 18: dependent_async
 #add_executable(
 #  bench_dependent_async
