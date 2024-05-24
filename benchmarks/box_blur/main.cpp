@@ -57,7 +57,7 @@ int main(int argc, char* argv[]) {
     int blur_radius = 50;
     app.add_option("-b,--blur-radius", blur_radius, "Blur radius (default=50)");
 
-    std::string model = "tf"; // Default to sequential
+    std::string model = "tf"; // Default to taskflow
     app.add_option("-p,--model", model,
                    "Parallelization method: tf|tbb|omp (default=tf)")
        ->check([](const std::string& p) {

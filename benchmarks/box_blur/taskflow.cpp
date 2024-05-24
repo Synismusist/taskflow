@@ -16,7 +16,6 @@ void boxBlurEffectTf(unsigned char* image_data, size_t width, size_t height, siz
     
     executor.run(taskflow).wait();
 }
-//TODO size_t is better than int in the scenario of if it is non negative 
 
 void boxBlurTf(unsigned char* image_data, size_t width, size_t channels, size_t blur_radius, int start_row, int end_row) {
     for (int y = start_row; y < end_row; ++y) {

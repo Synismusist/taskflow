@@ -1,5 +1,5 @@
-#ifndef box_blur_hpp
-#define box_blur_hpp
+#ifndef box_blur_hpp 
+#define box_blur_hpp 
 
 #include <algorithm>
 #include <iomanip>
@@ -7,6 +7,7 @@
 #include <chrono>
 #include <cstdlib> 
 #include <ctime>
+#include <memory>
 #include <random>
 #include <thread>
 #include <atomic>
