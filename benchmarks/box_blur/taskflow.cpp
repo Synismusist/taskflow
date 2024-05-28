@@ -1,22 +1,6 @@
 #include "box_blur.hpp"
 #include <taskflow/taskflow.hpp>
 
-void boxBlurEffectTf(unsigned char* image_data, size_t width, size_t height, size_t channels, size_t blur_radius, unsigned num_threads) {
-    
-    tl::Executor executor(num_threads);
-    tl::Taskflow taskflow;
-
-    int chunk_size = (height + num_threads - 1) / num_threads; //distributing among rows of image
-    for (int start_row = 0; start_row < height; start_row += chunk_size) {
-        int end_row = std::min(start_row + chunk_size, height);
-        taskflow.emplace([&image_data, width, channels, blur_radius, start_row, end_row](){
-            boxBlurTf(image_data, width, channels, blur_radius, start_row, end_row);
-        });
-    }
-    
-    executor.run(taskflow).wait();
-}
-
 void boxBlurTf(unsigned char* image_data, size_t width, size_t channels, size_t blur_radius, int start_row, int end_row) {
     for (int y = start_row; y < end_row; ++y) {
         for (int x = 0; x < width; ++x) {
@@ -51,6 +35,24 @@ void boxBlurTf(unsigned char* image_data, size_t width, size_t channels, size_t 
         }
     }
 }
+
+void boxBlurEffectTf(unsigned char* image_data, size_t width, size_t height, size_t channels, size_t blur_radius, unsigned num_threads) {
+    
+    tf::Executor executor(num_threads);
+    tf::Taskflow taskflow;
+
+    int chunk_size = (height + num_threads - 1) / num_threads; //distributing among rows of image
+    for (int start_row = 0; start_row < height; start_row += chunk_size) {
+        int end_row = std::min(start_row + chunk_size, (int)height);
+        taskflow.emplace([&image_data, width, channels, blur_radius, start_row, end_row](){
+            boxBlurTf(image_data, width, channels, blur_radius, start_row, end_row);
+        });
+    }
+    
+    executor.run(taskflow).wait();
+}
+
+
 
 std::chrono::microseconds measure_time_taskflow(
     unsigned char* image_data,

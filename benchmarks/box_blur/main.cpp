@@ -27,11 +27,11 @@ void box_blur(
 
         for (unsigned i = 0; i < num_rounds; ++i) {
             if (model == "tf") {
-                total_duration += measure_time_taskflow(image_data, width, height, channels, blur_radius, num_threads).count();
+                total_duration += measure_time_taskflow(image_data.get(), width, height, channels, blur_radius, num_threads).count();
             } else if (model == "tbb") {
-                total_duration += measure_time_tbb(image_data, width, height, channels, blur_radius, num_threads).count();
+                total_duration += measure_time_tbb(image_data.get(), width, height, channels, blur_radius, num_threads).count();
             } else if (model == "omp") {
-                total_duration += measure_time_omp(image_data, width, height, channels, blur_radius, num_threads).count();
+                total_duration += measure_time_omp(image_data.get(), width, height, channels, blur_radius, num_threads).count();
             }
         }
 
@@ -54,11 +54,11 @@ int main(int argc, char* argv[]) {
     unsigned num_rounds = 1;
     app.add_option("-r,--rounds", num_rounds, "Number of benchmark rounds (default=1)");
 
-    int blur_radius = 50;
+    int blur_radius = 5;
     app.add_option("-b,--blur-radius", blur_radius, "Blur radius (default=50)");
 
     std::string model = "tf"; // Default to taskflow
-    app.add_option("-p,--model", model,
+    app.add_option("-m,--model", model,
                    "Parallelization method: tf|tbb|omp (default=tf)")
        ->check([](const std::string& p) {
            if (p != "tf" && p != "tbb" && p != "omp") {
