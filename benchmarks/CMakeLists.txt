@@ -368,22 +368,24 @@ target_link_libraries(
 )
 set_target_properties(bench_box_blur PROPERTIES COMPILE_FLAGS ${OpenMP_CXX_FLAGS})
 
-## benchmark 18: dependent_async
+
+### benchmark 19: cholesky
 #add_executable(
-#  bench_dependent_async
-#  ${TF_BENCHMARK_DIR}/dependent_async/main.cpp
-#  ${TF_BENCHMARK_DIR}/dependent_async/omp.cpp
-#  ${TF_BENCHMARK_DIR}/dependent_async/taskflow.cpp
+#  bench_cholesky
+#  ${TF_BENCHMARK_DIR}/cholesky/main.cpp
+#  ${TF_BENCHMARK_DIR}/cholesky/omp.cpp
+#  ${TF_BENCHMARK_DIR}/cholesky/tbb.cpp
+#  ${TF_BENCHMARK_DIR}/cholesky/taskflow.cpp
 #)
-#target_include_directories(bench_dependent_async PRIVATE ${PROJECT_SOURCE_DIR}/3rd-party/CLI11)
+#target_include_directories(bench_cholesky PRIVATE ${PROJECT_SOURCE_DIR}/3rd-party/CLI11)
 #target_link_libraries(
-#  bench_dependent_async 
+#  bench_cholesky 
 #  ${PROJECT_NAME} 
 #  ${TBB_IMPORTED_TARGETS} 
 #  ${OpenMP_CXX_LIBRARIES} 
 #  tf::default_settings
 #)
-#set_target_properties(bench_dependent_async PROPERTIES COMPILE_FLAGS ${OpenMP_CXX_FLAGS})
+#set_target_properties(bench_cholesky PROPERTIES COMPILE_FLAGS ${OpenMP_CXX_FLAGS})
 
 ###############################################################################
 # CUDA benchmarks

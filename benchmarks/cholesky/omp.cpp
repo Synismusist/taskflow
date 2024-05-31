@@ -1,6 +1,11 @@
 #include "cholesky.hpp"
 #include <omp.h>
 
+
+// TODO: indent 2 space 
+//       use up to 80 characteris per line
+// you can take a look at Google C++ code style guideline: https://google.github.io/styleguide/cppguide.html
+
 void choleskyOMP(std::vector<std::vector<double>>& matrix, unsigned num_threads) {
     int n = matrix.size();
 
@@ -44,8 +49,8 @@ void choleskyOMP(std::vector<std::vector<double>>& matrix, unsigned num_threads)
 }
 
 std::chrono::microseconds measure_time_OMP(
-const std::vector<std::vector<int>>& matrix,
-unsigned num_threads){
+  const std::vector<std::vector<int>>& matrix, unsigned num_threads
+){
     auto beg = std::chrono::high_resolution_clock::now();
     choleskyOMP(matrix, num_threads);
     auto end = std::chrono::high_resolution_clock::now();
