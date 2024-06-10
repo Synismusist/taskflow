@@ -9,19 +9,19 @@ void cholesky(
 {
   //creating matix of size from 10x10 to 100x100 with increments from 10s
   //matrix is a random symmetrix matrix and to do LL'
-    
-  for(size_t dimension = 10; dimension<=100; dimension+=10){
 
-    // TODO: move this matrix outside the loop so you don't iteratively create and destroy
-    //       the vector
-    //       use vector::resize instead
-    std::vector<std::vector<int>> matrix(dimension, std::vector<int>(dimension));
-    
-    // TODO: move this random device outside the loop
-    //       the first two lines are very expensive
-    std::random_device rndDev;
-    std::mt19937 gen(rndDev());
-    std::uniform_int_distribution<int> dis(0,100);
+  std::vector<std::vector<int>> matrix(100, std::vector<int>(100));
+  std::random_device rndDev;
+  std::mt19937 gen(rndDev());
+  std::uniform_int_distribution<int> dis(0,100);
+
+  for(size_t dimension = 100; dimension>=10; dimension-=10){
+
+    matrix.resize(dimension);
+
+    for(auto& row: matrix){
+      row.resize(dimension);
+    }
     
     for(size_t i=0; i<dimension; i++){
       matrix[i][i]=(dis(gen));
@@ -32,11 +32,6 @@ void cholesky(
       }
     }
     
-    // TODO: normally, compiler will figure the type for constants
-    //       but you can explicitly specify the type 
-    //       int = 0
-    //       float = 0.0f
-    //       double = 0.0
     double total_duration{0.0};
 
     for (unsigned i = 0; i < num_rounds; ++i) {
@@ -46,6 +41,8 @@ void cholesky(
         total_duration += measure_time_tbb(matrix, num_threads).count();
       } else if (model == "omp") {
         total_duration += measure_time_omp(matrix, num_threads).count();
+      } else if (model == "tf-dynamic") {
+        total_duration += measure_time_taskflow_dynamic(matrix, num_threads).count();
       }
     }
 
@@ -66,12 +63,11 @@ int main(int argc, char* argv[]) {
 
     std::string model = "tf"; // Default to taskflow
 
-    // TODO: name a new method "tf-dynamic"
 
     app.add_option("-m,--model", model,
-                   "Parallelization method: tf|tbb|omp (default=tf)")
+                   "Parallelization method: tf|tbb|omp|tf-dynamic (default=tf)")
        ->check([](const std::string& p) {
-           if (p != "tf" && p != "tbb" && p != "omp") {
+           if (p != "tf" && p != "tbb" && p != "omp" && p!= "tf-dynamic") {
                return "incorrect model it should be \"tbb\", \"omp\", or \"tf\"";
            }
            return "";
