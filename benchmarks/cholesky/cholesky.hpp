@@ -16,5 +16,6 @@
 std::chrono::microseconds measure_time_taskflow(const std::vector<std::vector<int>>& matrix, unsigned num_threads);
 std::chrono::microseconds measure_time_tbb(const std::vector<std::vector<int>>& matrix, unsigned num_threads);
 std::chrono::microseconds measure_time_omp(const std::vector<std::vector<int>>& matrix, unsigned num_threads);
+std::chrono::microseconds measure_time_taskflow_dynamic(const std:: vector<std::vector<int>>& matrix, unsigned num_threads);
 
 #endif // cholesky_hpp
