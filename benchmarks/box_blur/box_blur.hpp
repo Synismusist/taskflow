@@ -17,4 +17,4 @@ std::chrono::microseconds measure_time_taskflow(unsigned char* image_data, size_
 std::chrono::microseconds measure_time_tbb(unsigned char* image_data, size_t width, size_t height, size_t channels, size_t blur_radius, unsigned num_threads);
 std::chrono::microseconds measure_time_omp(unsigned char* image_data, size_t width, size_t height, size_t channels, size_t blur_radius, unsigned num_threads);
 
-#endif box_blur_hpp
+#endif 

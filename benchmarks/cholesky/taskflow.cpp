@@ -3,7 +3,7 @@
 #include <cmath>
 #include <iostream>
 
-void choleskyTaskflow(std::vector<std::vector<double>>& matrix, 
+void choleskyTaskflow(std::vector<std::vector<int>>& matrix, 
                       unsigned num_threads) {
   // Counter or size type should always be non-negative
   size_t n = matrix.size();
@@ -46,7 +46,7 @@ void choleskyTaskflow(std::vector<std::vector<double>>& matrix,
 }
 
 std::chrono::microseconds measure_time_taskflow(
-    std::vector<std::vector<double>>& matrix, 
+    std::vector<std::vector<int>>& matrix, 
     unsigned num_threads) {
   auto beg = std::chrono::high_resolution_clock::now();
   choleskyTaskflow(matrix, num_threads);

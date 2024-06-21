@@ -1,10 +1,8 @@
 #include "cholesky.hpp"
 #include <tbb/global_control.h>
 #include <tbb/parallel_for.h>
-#include <cmath>
-#include <iostream>
 
-void choleskyTBB(std::vector<std::vector<double>>& matrix, unsigned num_threads) {
+void choleskyTBB(const std::vector<std::vector<int>>& matrix, unsigned num_threads) {
     int n = matrix.size();
 
     tbb::global_control control(
@@ -34,7 +32,9 @@ void choleskyTBB(std::vector<std::vector<double>>& matrix, unsigned num_threads)
     }
 }
 
-std::chrono::microseconds measure_time_tbb(std::vector<std::vector<double>>& matrix, unsigned num_threads) {
+std::chrono::microseconds measure_time_tbb(
+    const std::vector<std::vector<double>>& matrix, 
+    unsigned num_threads) {
     auto beg = std::chrono::high_resolution_clock::now();
     choleskyTBB(matrix, num_threads);
     auto end = std::chrono::high_resolution_clock::now();

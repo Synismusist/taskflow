@@ -37,9 +37,11 @@ void cholesky(
     for (unsigned i = 0; i < num_rounds; ++i) {
       if (model == "tf") {
         total_duration += measure_time_taskflow(matrix, num_threads).count();
-      } else if (model == "tbb") {
+      } 
+      /*else if (model == "tbb") {
         total_duration += measure_time_tbb(matrix, num_threads).count();
-      } else if (model == "omp") {
+      }*/ 
+      else if (model == "omp") {
         total_duration += measure_time_omp(matrix, num_threads).count();
       } else if (model == "tf-dynamic") {
         total_duration += measure_time_taskflow_dynamic(matrix, num_threads).count();
