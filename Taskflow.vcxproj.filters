@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="examples">
+      <UniqueIdentifier>{84D830B1-70A5-8BBC-99BE-796485EAC04A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="examples\dsl">
+      <UniqueIdentifier>{F6F84C17-E25B-DCBB-8BE1-14727723A83E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="examples\sycl">
+      <UniqueIdentifier>{2E6AF400-9A2A-7037-6365-B9B4CFE4B413}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taskflow">
+      <UniqueIdentifier>{300C64C8-1CD9-BED3-45F2-AC7B311EF461}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taskflow\algorithm">
+      <UniqueIdentifier>{86D50780-72B9-C8D5-DB19-C328C71CB357}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taskflow\core">
+      <UniqueIdentifier>{A8DA4D18-149B-C94E-DDD5-12CC49550E2B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taskflow\cuda">
+      <UniqueIdentifier>{5CF24D18-C8B2-C94E-91ED-12CCFD6C0E2B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taskflow\cuda\algorithm">
+      <UniqueIdentifier>{B262F8BD-1E9A-4055-27A4-A478935A674E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taskflow\dsl">
+      <UniqueIdentifier>{A2220A37-8E85-99DB-370B-D291234D655E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taskflow\sycl">
+      <UniqueIdentifier>{5AC95618-C689-D24E-8FC4-1BCCFB43172B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taskflow\sycl\algorithm">
+      <UniqueIdentifier>{308F8039-9CC6-C8D0-A5D0-2CF41187EFC9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taskflow\utility">
+      <UniqueIdentifier>{9392B83D-7F8B-D78F-A8BD-BC149415B79B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="taskflow\algorithm\data_pipeline.hpp">
+      <Filter>taskflow\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\algorithm\find.hpp">
+      <Filter>taskflow\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\algorithm\for_each.hpp">
+      <Filter>taskflow\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\algorithm\launch.hpp">
+      <Filter>taskflow\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\algorithm\partitioner.hpp">
+      <Filter>taskflow\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\algorithm\pipeline.hpp">
+      <Filter>taskflow\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\algorithm\reduce.hpp">
+      <Filter>taskflow\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\algorithm\scan.hpp">
+      <Filter>taskflow\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\algorithm\sort.hpp">
+      <Filter>taskflow\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\algorithm\transform.hpp">
+      <Filter>taskflow\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\core\async.hpp">
+      <Filter>taskflow\core</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\core\async_task.hpp">
+      <Filter>taskflow\core</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\core\atomic_notifier.hpp">
+      <Filter>taskflow\core</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\core\declarations.hpp">
+      <Filter>taskflow\core</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\core\environment.hpp">
+      <Filter>taskflow\core</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\core\error.hpp">
+      <Filter>taskflow\core</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\core\executor.hpp">
+      <Filter>taskflow\core</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\core\flow_builder.hpp">
+      <Filter>taskflow\core</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\core\graph.hpp">
+      <Filter>taskflow\core</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\core\nonblocking_notifier.hpp">
+      <Filter>taskflow\core</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\core\observer.hpp">
+      <Filter>taskflow\core</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\core\semaphore.hpp">
+      <Filter>taskflow\core</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\core\task.hpp">
+      <Filter>taskflow\core</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\core\taskflow.hpp">
+      <Filter>taskflow\core</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\core\topology.hpp">
+      <Filter>taskflow\core</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\core\tsq.hpp">
+      <Filter>taskflow\core</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\core\worker.hpp">
+      <Filter>taskflow\core</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\cuda\algorithm\find.hpp">
+      <Filter>taskflow\cuda\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\cuda\algorithm\for_each.hpp">
+      <Filter>taskflow\cuda\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\cuda\algorithm\matmul.hpp">
+      <Filter>taskflow\cuda\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\cuda\algorithm\merge.hpp">
+      <Filter>taskflow\cuda\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\cuda\algorithm\reduce.hpp">
+      <Filter>taskflow\cuda\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\cuda\algorithm\scan.hpp">
+      <Filter>taskflow\cuda\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\cuda\algorithm\sort.hpp">
+      <Filter>taskflow\cuda\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\cuda\algorithm\transform.hpp">
+      <Filter>taskflow\cuda\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\cuda\algorithm\transpose.hpp">
+      <Filter>taskflow\cuda\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\cuda\cuda_capturer.hpp">
+      <Filter>taskflow\cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\cuda\cuda_device.hpp">
+      <Filter>taskflow\cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\cuda\cuda_error.hpp">
+      <Filter>taskflow\cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\cuda\cuda_execution_policy.hpp">
+      <Filter>taskflow\cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\cuda\cuda_graph.hpp">
+      <Filter>taskflow\cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\cuda\cuda_memory.hpp">
+      <Filter>taskflow\cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\cuda\cuda_meta.hpp">
+      <Filter>taskflow\cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\cuda\cuda_object.hpp">
+      <Filter>taskflow\cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\cuda\cuda_optimizer.hpp">
+      <Filter>taskflow\cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\cuda\cuda_stream.hpp">
+      <Filter>taskflow\cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\cuda\cuda_task.hpp">
+      <Filter>taskflow\cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\cuda\cudaflow.hpp">
+      <Filter>taskflow\cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\dsl\connection.hpp">
+      <Filter>taskflow\dsl</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\dsl\dsl.hpp">
+      <Filter>taskflow\dsl</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\dsl\meta_macro.hpp">
+      <Filter>taskflow\dsl</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\dsl\task_analyzer.hpp">
+      <Filter>taskflow\dsl</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\dsl\task_dsl.hpp">
+      <Filter>taskflow\dsl</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\dsl\task_trait.hpp">
+      <Filter>taskflow\dsl</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\dsl\tuple_utils.hpp">
+      <Filter>taskflow\dsl</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\dsl\type_list.hpp">
+      <Filter>taskflow\dsl</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\sycl\algorithm\reduce.hpp">
+      <Filter>taskflow\sycl\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\sycl\algorithm\sycl_for_each.hpp">
+      <Filter>taskflow\sycl\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\sycl\algorithm\sycl_transform.hpp">
+      <Filter>taskflow\sycl\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\sycl\sycl_execution_policy.hpp">
+      <Filter>taskflow\sycl</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\sycl\sycl_graph.hpp">
+      <Filter>taskflow\sycl</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\sycl\sycl_meta.hpp">
+      <Filter>taskflow\sycl</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\sycl\sycl_task.hpp">
+      <Filter>taskflow\sycl</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\sycl\syclflow.hpp">
+      <Filter>taskflow\sycl</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\taskflow.hpp">
+      <Filter>taskflow</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\utility\iterator.hpp">
+      <Filter>taskflow\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\utility\latch.hpp">
+      <Filter>taskflow\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\utility\macros.hpp">
+      <Filter>taskflow\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\utility\math.hpp">
+      <Filter>taskflow\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\utility\object_pool.hpp">
+      <Filter>taskflow\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\utility\os.hpp">
+      <Filter>taskflow\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\utility\serializer.hpp">
+      <Filter>taskflow\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\utility\singleton.hpp">
+      <Filter>taskflow\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\utility\small_vector.hpp">
+      <Filter>taskflow\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\utility\stream.hpp">
+      <Filter>taskflow\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\utility\traits.hpp">
+      <Filter>taskflow\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="taskflow\utility\uuid.hpp">
+      <Filter>taskflow\utility</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="examples\async.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\attach_data.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\cancel.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\composition.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\condition.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\corun.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\data_scalable_parallel_pipeline.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\dependent_async.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\dependent_async_algorithm.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\do_while_loop.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\dsl\condition_dsl.cpp">
+      <Filter>examples\dsl</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\dsl\simple_dsl.cpp">
+      <Filter>examples\dsl</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\dsl\visualization_dsl.cpp">
+      <Filter>examples\dsl</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\exception.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\exclusive_scan.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\fibonacci.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\if_else.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\inclusive_scan.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\limited_concurrency.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\multi_condition.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\nested_if_else.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\observer.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\parallel_data_pipeline.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\parallel_for.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\parallel_graph_pipeline.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\parallel_sort.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\pipeline.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\pipeline_with_deferred_tokens.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\priority.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\reduce.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\run.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\runtime.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\scalable_pipeline.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\scalable_pipeline_with_deferred_tokens.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\simple.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\subflow.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\subflow_async.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\switch_case.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\sycl\sycl_atomic.cpp">
+      <Filter>examples\sycl</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\sycl\sycl_device.cpp">
+      <Filter>examples\sycl</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\sycl\sycl_matmul.cpp">
+      <Filter>examples\sycl</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\sycl\sycl_ndrange.cpp">
+      <Filter>examples\sycl</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\sycl\sycl_rebind.cpp">
+      <Filter>examples\sycl</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\sycl\sycl_reduce.cpp">
+      <Filter>examples\sycl</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\sycl\sycl_saxpy.cpp">
+      <Filter>examples\sycl</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\sycl\sycl_transform.cpp">
+      <Filter>examples\sycl</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\sycl\sycl_vector_add.cpp">
+      <Filter>examples\sycl</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\taskflow_pipeline.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\text_pipeline.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\visualization.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\while_loop.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
